@@ -20,4 +20,4 @@ if __name__ == '__main__':
 	files_sorted_by_modtime = sorted(regular_files, key=lambda file: file[1].st_mtime)
 	for f in files_sorted_by_modtime:
 		filename, mtime = f[0], time.ctime(float(f[1].st_mtime))
-		print '{:<35}'.format(filename), '{:<15}'.format(mtime)
+		print '{:<15}'.format(mtime), '{:<35}'.format(filename)
